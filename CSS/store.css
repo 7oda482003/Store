@@ -99,7 +99,7 @@ header .container {
 }
 
 header .container i {
-    font-size: 20px;
+    font-size: 25px;
     color: blue;
     margin-left: 10px;
     cursor: pointer;
@@ -150,7 +150,6 @@ header .container ul li a:hover {
 .shopping {
     width: 40px;
     height: 40px;
-    background-color: #19c8fa;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -164,7 +163,7 @@ header .container ul li a:hover {
 
 .shopping i {
     font-size: 25px;
-    color: #fff;
+    color: #19c8fa;
 }
 
 

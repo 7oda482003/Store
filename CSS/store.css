@@ -155,14 +155,14 @@ header .container ul li a:hover {
     align-items: center;
     justify-content: center;
     position: fixed;
-    right: 5px;
-    bottom: 5px;
+    right: 8px;
+    bottom: 8px;
     z-index: 10;
     cursor: pointer;
 }
 
 .shopping i {
-    font-size: 25px;
+    font-size: 35px;
     color: #19c8fa;
 }
 

@@ -1,0 +1,361 @@
+/* ----------------start global---------------------*/
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+.login {
+    width: 100%;
+    height: 100vh;
+    background-image: url(background.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+} 
+
+.login .title {
+    font-size: 50px;
+    font-weight: 800;
+    color: rgb(255, 170, 0, 0.74);
+    padding: 10px;
+    top: 150px;
+    position: absolute;
+    z-index: 1;
+}
+
+@media (max-width: 767px) {
+    .login .title{
+        top: 50px;
+        font-size: 40px;
+    }
+    
+}
+
+.login .inputs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 10;
+}
+
+.inputs .ussername,
+.inputs .password,
+.inputs .submit {
+    width: 300px;
+    height: 40px;
+    padding:11px;
+    margin: 5px;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    background-color: rgba(255, 170, 0, 0.74);
+    color: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.586);
+}
+
+.inputs .submit {
+    width: 100px;
+}
+
+.inputs .submit:hover {
+    cursor: pointer;
+}
+
+/* -----------header---------------- */
+
+header {
+    background-color: rgb(159, 159, 159);
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+header .container i {
+    font-size: 20px;
+    color: blue;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+header .container .wellcome-message {
+    font-size: 20px;
+    font-weight: 600;
+    text-shadow: 0 0 10px white;
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+}
+
+@media (max-width: 767px) {
+    header .container .wellcome-message {
+        display: none;
+    }
+}
+
+header .container ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+header .container ul li a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 5px 20px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+header .container ul li a:hover {
+    background-color: blue;
+    color: white;
+    transform: scale(1.1);
+}
+
+
+.shopping {
+    width: 40px;
+    height: 40px;
+    background-color: #19c8fa;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    right: 5px;
+    bottom: 5px;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.shopping i {
+    font-size: 25px;
+    color: #fff;
+}
+
+
+
+
+/* --------------main heading------------------ */
+
+
+.main-heading {
+    text-align: center;
+    padding-top: 50px;
+}
+
+.main-heading h2 {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 70px;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.main-heading h2::before {
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 3px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #19c8fa;
+    bottom: -20px;
+}
+
+.main-heading h2::after {
+    content: "";
+    position: absolute;
+    width: 17px;
+    height: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    border: 3px solid #19c8fa;
+    bottom: -28px;
+    border-radius: 50%;
+}
+
+.main-heading p {
+    font-size: 15px;
+    font-weight: 600;
+    color: #777;
+    width: 500px;
+    margin: 0 auto 100px;
+    max-width: 100%;
+    line-height: 2;
+}
+
+
+
+/* ------------main------------ */
+
+.box {
+    background-color: #7777774f;
+    border-radius: 20px;
+    text-align: center;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgb(141, 136, 136);
+}
+
+.box .image {
+    width: 100%;
+    height: 300px;
+    padding-top: 5px;
+    border-radius: 20px 20px 0 0;
+    background-color: white;
+    border: 2px solid #7777774f;
+}
+
+.box .image img {
+    height: 100%;
+}
+
+.box .caption {
+    padding: 10px;
+    border-radius: 0 0 20px 20px;
+    color: white;
+
+}
+
+.box .caption p {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.box .caption i {
+    font-size: 20px;
+    color: yellow;
+}
+
+.box .caption .price  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.box .caption .price p {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.box .caption .price span {
+    font-size: 18px;
+    margin: -15px 5px 0 5px ;
+}
+
+
+/* ------------T-shirts--------------- */
+
+
+.t-shirts .t-shirts_box {
+    background-color: #dadada39;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+}
+
+
+/* -------------- Pants---------------- */
+
+.pants .pants_box {
+    background-color: #dadada39;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+}
+
+
+/* -------------- Dresses---------------- */
+
+.dresses .dresses_box {
+    background-color: #dadada39;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+}
+
+/* -----------Contact Us------------- */
+
+.contact-us .contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    padding-bottom: 50px; 
+}
+
+.contact-us .contact i {
+    font-size: 20px;
+    font-weight: 400;
+    padding: 20px;
+    cursor: pointer;
+}
+
+/* ----------Foter------------- */
+
+footer {
+    background-color: black;
+    text-align: center;
+    padding: 10px;
+}
+
+footer p {
+    font-size: 20px;
+    color: white;
+}
+
+footer p i {
+    font-size: 15px;
+}
+
+footer p span {
+    color: blue;
+}

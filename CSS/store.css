@@ -146,6 +146,9 @@ header .container ul li a:hover {
     transform: scale(1.1);
 }
 
+#check {
+    display: none;
+}
 
 .shopping {
     width: 40px;
@@ -155,15 +158,52 @@ header .container ul li a:hover {
     align-items: center;
     justify-content: center;
     position: fixed;
-    right: 8px;
-    bottom: 8px;
+    right: 0;
+    bottom: 0;
     z-index: 10;
-    cursor: pointer;
 }
 
 .shopping i {
     font-size: 35px;
     color: #19c8fa;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transition: all 0.3s linear;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.card {
+    position: relative;
+    width: 100%;
+    height: 0;
+    background-color: #7777774f;
+    transition: all 0.5s linear;
+    transform: scale(0);
+    transform-origin: bottom;
+}
+
+.btn-one i {
+    font-size: 30px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+
+#check:checked ~ .shopping i {
+    opacity: 0;
+}
+
+#check:checked ~ .card {
+    transform: scale(1);
+    height: 100vh;
+}
+
+#check:checked ~ .total {
+    display: none;
 }
 
 
@@ -183,31 +223,33 @@ header .container ul li a:hover {
     margin-bottom: 70px;
     position: relative;
     text-transform: uppercase;
+    transition: 0.6s;
 }
 
 .main-heading h2::before {
-    content: "";
-    position: absolute;
-    width: 150px;
-    height: 3px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #19c8fa;
-    bottom: -20px;
+        content: "";
+        position: absolute;
+        width: 150px;
+        height: 3px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #19c8fa;
+        bottom: -20px;
 }
 
 .main-heading h2::after {
-    content: "";
-    position: absolute;
-    width: 17px;
-    height: 15px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: white;
-    border: 3px solid #19c8fa;
-    bottom: -28px;
-    border-radius: 50%;
+        content: "";
+        position: absolute;
+        width: 17px;
+        height: 15px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: white;
+        border: 3px solid #19c8fa;
+        bottom: -28px;
+        border-radius: 50%;
 }
+
 
 .main-heading p {
     font-size: 15px;
@@ -229,11 +271,47 @@ header .container ul li a:hover {
     text-align: center;
     transition: 0.4s;
     cursor: pointer;
+    position: relative;
 }
 
 .box:hover {
     transform: scale(1.05);
     box-shadow: 0 0 10px rgb(141, 136, 136);
+}
+
+.box .discount-1 {
+    position: absolute;
+    right: 15px;
+    top: -10px;
+    background-color: rgb(193, 8, 8);
+    height: 70px;
+    padding: 10px 5px;
+    color: white;
+    font-size: 20px;
+    border-radius: 0 10px 0 0;
+}
+
+.discount::before {
+    content: "";
+    position: absolute;
+    background-color: rgb(193, 8, 8);
+    top: -10px;
+    right: 60px;
+    width: 5px;
+    border-radius: 10px 0 0 0;
+    font-size: 10px;
+    color: white;
+    padding: 10px 2px 0 2px;
+}
+
+.discount::after {
+    content: "";
+    position: absolute;
+    border-style:solid ;
+    border-width: 25px;
+    border-color: transparent transparent white transparent;
+    top: 11px;
+    right: 13px;
 }
 
 .box .image {
@@ -261,27 +339,69 @@ header .container ul li a:hover {
     font-weight: 600;
 }
 
+.box .caption p:hover {
+    color: red;
+    text-shadow: 0 0 5px white;
+}
+
 .box .caption i {
     font-size: 20px;
     color: yellow;
 }
 
-.box .caption .price  {
+.caption .data {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px 0;
+}
+
+.caption .data .price  {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 10px;
 }
 
-.box .caption .price p {
+.data .price p {
     font-size: 30px;
     font-weight: 600;
 }
 
-.box .caption .price span {
+.data .price span {
     font-size: 18px;
     margin: -15px 5px 0 5px ;
 }
+
+.data .view {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.data .view:hover {
+    border: 2px ridge rgba(133, 133, 133, 0.3);
+    border-radius: 20px;
+    background-color: rgba(173, 173, 173, 0.501);
+    i,
+    p {
+        color: red;
+    }
+}
+
+.data .view p {
+    font-size: 15px;
+    padding: 0 7px 0 0;
+}
+
+.data .view i {
+    font-size: 10px;
+    color: white;
+}
+
+
+
 
 
 /* ------------T-shirts--------------- */
@@ -347,12 +467,12 @@ footer {
 }
 
 footer p {
-    font-size: 20px;
+    font-size: 10px;
     color: white;
 }
 
 footer p i {
-    font-size: 15px;
+    font-size: 10px;
 }
 
 footer p span {
